@@ -14,4 +14,4 @@ app.listen((PORT), () => {
     console.log(`server start on http://localhost/${PORT}`)
 })
 
-app.use('/api/',Employeroute)
+app.use('/api',Employeroute)
