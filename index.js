@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 // DB Connection
 
 
-mongoose.connect('mongodb://localhost:27017/admin',{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect('mongodb+srv://admin:admin@cluster0.evmfzf4.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true})
 const db = mongoose.connection
 
 db.on('error',(err)=>{
