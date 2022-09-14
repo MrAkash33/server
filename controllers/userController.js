@@ -4,9 +4,9 @@ const Employee = require('../models/user')
 const index = (req,res,next) => {
     Employee.find()
     .then(response=>{
-        res.json({
+        res.json(
             response
-        })
+        )
     })
     .catch(error =>{
         res.json({
