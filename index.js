@@ -16,7 +16,17 @@ app.use(bodyParser.json());
 // DB Connection
 
 
-mongoose.connect('mongodb+srv://admin:admin@cluster0.evmfzf4.mongodb.net/?retryWrites=true&w=majority')
+// const mongoosLive = async () =>{
+//    try{
+//         await mongoose.connect('mongodb+srv://admin:admin@cluster0.evmfzf4.mongodb.net/user?retryWrites=true&w=majority')
+//        console.log("Established");
+//    }
+//     catch(err){
+//         console.log("not Connected",err);
+//     }
+// }
+// mongoosLive()
+mongoose.connect('mongodb+srv://admin:admin@cluster0.evmfzf4.mongodb.net/user?retryWrites=true&w=majority')
 const db = mongoose.connection
 
 db.on('error',(err)=>{
