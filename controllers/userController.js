@@ -19,9 +19,9 @@ const show = (req,res,next) =>{
     let employeeId = req.params.id;
     Employee.findById(employeeId)
     .then(response =>{
-        res.json({
+        res.json(
             response
-        })
+        )
     }).catch(error =>{
         res.json({
             message:`error accured in id ${employeeId}`
