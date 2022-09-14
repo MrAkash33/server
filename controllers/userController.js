@@ -1,4 +1,4 @@
-const { application } = require('express')
+
 const Employee = require('../models/user')
 
 const index = (req,res,next) => {
@@ -31,6 +31,7 @@ const show = (req,res,next) =>{
 
 // Add New Employee
 const store = (req,res,next) =>{
+    console.log(req.body)
     console.log("hii am called")
     let employee = new Employee({
         name: req.body.name,
